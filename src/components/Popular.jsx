@@ -22,6 +22,11 @@ const Popular = () => (
         //description="Conviértete en un experto en C# y desarrolla aplicaciones de alto rendimiento para la web, juegos y más con este curso integral."
         image={require("../img/csharp.jpg")} // Asegúrate de que esta imagen exista
       />
+      <ProductContainer
+        name="SwiftUI"
+        //description="Conviértete en un experto en C# y desarrolla aplicaciones de alto rendimiento para la web, juegos y más con este curso integral."
+        image={require("../img/swiftui-og.png")} // Asegúrate de que esta imagen exista
+      />
     </div>
   </>
 );
