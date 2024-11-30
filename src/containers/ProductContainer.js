@@ -1,15 +1,16 @@
- import React from 'react';
+import React from 'react';
 import './ProductContainer.css';
 
-const ProductContainer = ({ name, description, image }) => {
+const ProductContainer = ({ name, description, image, isSearchResult }) => {
   return (
-    <div className="product-container">
+    <div className={`product-container ${isSearchResult ? 'search-result' : ''}`}>
       <img src={image} alt={name} className="product-image" />
       <h2>{name}</h2>
-      <p>{description}</p>
-      <button className="add-button">Añadir Curso</button>
+      {!isSearchResult && <p>{description}</p>}
+      <button className="add-button">+Añadir</button>
     </div>
   );
 };
 
 export default ProductContainer;
+

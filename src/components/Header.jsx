@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "../index.css";
 
-const Header = () => {
+const Header = ({ setSearchQuery }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+    setSearchQuery(event.target.value); // Actualiza la búsqueda en el estado principal
+  };
+
   return (
     <header>
       <div className="logo">
@@ -12,17 +19,21 @@ const Header = () => {
         <div className="line"></div>
         <div className="line"></div>
       </div>
-      <nav className="nav-bar">
-        <ul>
-          <li><a href="#" className="active">Inicio</a></li>
-          <li><a href="portfolio.html">Portafolio</a></li>
-          <li><a href="services.html">Servicios</a></li>
-          <li><a href="us.html">Nosotros</a></li>
-          <li><a href="contact.html">Contactos</a></li>
-        </ul>
-      </nav>
+      
+      {/* Barra de búsqueda dinámica */}
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Buscar productos..."
+          value={searchTerm}
+          onChange={handleChange}
+          aria-label="Buscar productos"
+        />
+      </div>
     </header>
   );
 };
 
 export default Header;
+
+
