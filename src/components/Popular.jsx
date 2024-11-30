@@ -25,7 +25,7 @@ const Popular = () => (
       <ProductContainer
         name="SwiftUI"
         //description="Conviértete en un experto en C# y desarrolla aplicaciones de alto rendimiento para la web, juegos y más con este curso integral."
-        image={require("../img/swiftui-og.png")} // Asegúrate de que esta imagen exista
+        image={require("../img/swiftui.jpeg.avif")} // Asegúrate de que esta imagen exista
       />
     </div>
   </>
