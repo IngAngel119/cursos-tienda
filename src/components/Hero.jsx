@@ -14,9 +14,6 @@ const Hero = () => {
           desde principiantes que buscan explorar nuevas áreas de conocimiento, hasta expertos que desean perfeccionar sus habilidades.
           </p>
           <p>
-          En nuestra plataforma, creemos que la educación debe ser accesible, 
-          práctica y emocionante. Por eso, cada curso está cuidadosamente estructurado para brindarte conocimientos actualizados, 
-          con ejemplos del mundo real, proyectos interactivos y recursos exclusivos que te ayudarán a avanzar con confianza.
           </p>
           <p>
           Ya sea que quieras aprender a programar, desarrollar tus habilidades creativas o mejorar 
