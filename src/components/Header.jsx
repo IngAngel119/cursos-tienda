@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../index.css";
+import homeicon from "../img/home-icon.png";
+import carticon from "../img/cart-icon.png";
 
 const Header = ({ setSearchQuery }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -11,16 +14,19 @@ const Header = ({ setSearchQuery }) => {
 
   return (
     <header>
-      <div className="logo">
-        <img src="./assets/Logo - Av1Ev1.jpg" alt="Logo" />
+      <div className="nav-buttons">
+        <Link to="/" className="nav-button home-button">
+          <img src={homeicon} alt="Home" className="icon" />
+        </Link>
+        <Link to="/cart" className="nav-button cart-button">
+          <img src={carticon} alt="Carrito" className="icon" />
+        </Link>
       </div>
       <div className="bars">
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
       </div>
-      
-      {/* Barra de búsqueda dinámica */}
       <div className="search-container">
         <input
           type="text"
@@ -35,5 +41,3 @@ const Header = ({ setSearchQuery }) => {
 };
 
 export default Header;
-
-

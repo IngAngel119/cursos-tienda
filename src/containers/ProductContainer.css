@@ -1,4 +1,4 @@
-    .animated-title {
+/*   .animated-title {
     text-align: center;
     font-size: 2em;
     margin: 20px 0;
@@ -70,12 +70,13 @@
     font-size: 1em;
     margin: 0 10px;
   }
-  
+
+
   .product-container.search-result .add-button {
     padding: 5px 10px;
   }
 
-/* Media query para pantallas pequeñas */
+/* Media query para pantallas pequeñas *
 @media (max-width: 950px) {
   .product-list {
     flex-direction: column;
@@ -86,9 +87,117 @@
     max-width: 70%;
     width: 100%;
   }
+
+  .product-container.search-result {
+    max-width: 100%;
+    width: 100%;
+  }
   
   .product-image {
     width: 100%;
     height: auto;
   }
+}
+*/
+
+
+
+.animated-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.product-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.product-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.add-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4b5bd7;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #6776e7;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-container.search-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0px;
+}
+
+.product-container.search-result .product-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.product-container.search-result h2 {
+  font-size: 1em;
+  margin: 0 10px;
+}
+
+.product-container.search-result .product-price {
+  font-size: 1em;
+  margin: 0 10px;
+  color: #333;
+}
+
+.product-container.search-result .add-button {
+  padding: 5px 10px;
+}
+
+.cart-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-total {
+  margin-top: 20px;
 }

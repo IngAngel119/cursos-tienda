@@ -1,10 +1,10 @@
 import React from "react";
 import ProductContainer from "../containers/ProductContainer";
 
-const Popular = ({ courses, handleAddToCart }) => (
+const Products = ({ courses, handleAddToCart }) => (
   <>
     <div className="page-title">
-      <h1 className="animated-title">+ Populares</h1>
+      <h1 className="animated-title">Todos los Productos</h1>
     </div>
     <div className="product-list">
       {courses.map((course, index) => (
@@ -21,4 +21,4 @@ const Popular = ({ courses, handleAddToCart }) => (
   </>
 );
 
-export default Popular;
+export default Products;

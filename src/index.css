@@ -24,11 +24,28 @@ header {
   padding: 0 100px;
 }
 
-.logo img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.658);
+.nav-buttons { 
+  display: flex; 
+  gap: 20px; 
+  border-radius: 15px;
+  padding: 10px 10px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+} 
+
+.nav-button {
+   background: none; 
+   border: none; 
+   cursor: pointer; 
+  }
+
+.icon { 
+  height: 30px; 
+  width: 30px; 
+}
+
+.icon:hover { 
+  height: 40px; 
+  width: 40px; 
 }
 
 .search-container {
@@ -37,6 +54,9 @@ header {
   justify-content: center;
   gap: 10px;
   position: relative; 
+  border-radius: 15px;
+  padding: 10px 10px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
   z-index: 10; 
 }
 
@@ -45,7 +65,7 @@ header {
   font-size: 16px;
   width: 300px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
 }
 
 .search-results-wrapper {
@@ -216,7 +236,7 @@ footer {
   gap: 20px;
   padding: 10px 10px;
   border-radius: 15px;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
 }
 
 .social-media a img {

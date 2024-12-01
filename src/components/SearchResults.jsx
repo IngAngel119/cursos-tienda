@@ -2,7 +2,7 @@ import React from "react";
 import ProductContainer from "../containers/ProductContainer";
 import "../index.css";
 
-const SearchResults = ({ results }) => {
+const SearchResults = ({ results, handleAddToCart }) => {
   return (
     <div className="search-results-container">
       {results.length > 0 ? (
@@ -11,8 +11,10 @@ const SearchResults = ({ results }) => {
             key={index}
             name={course.name}
             description={course.description}
-            image={course.image || require("../img/default.webp")} // Imagen por defecto
+            image={course.image || require("../img/default.webp")} 
+            price={course.price}
             isSearchResult={true}
+            handleAddToCart={handleAddToCart}
           />
         ))
       ) : (
@@ -23,6 +25,7 @@ const SearchResults = ({ results }) => {
 };
 
 export default SearchResults;
+
 
 
 
