@@ -8,6 +8,7 @@ import Popular from "./components/Popular";
 import Products from "./components/Products";
 import SearchResults from "./components/SearchResults";
 import Cart from "./components/Cart";
+import AboutUs from "./components/AboutUs";
 import Notification from "./components/Notification";
 import "./index.css";
 
@@ -26,7 +27,7 @@ function App() {
       name: "Curso Java", 
       description: "Aprende Java desde los fundamentos.", 
       image: require("./img/java.webp"), 
-      price: 150 
+      price: 150
     },
     { 
       name: "Curso Python", 
@@ -139,6 +140,9 @@ function App() {
           path="/cart"
           element={<Cart cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} />}
         />
+        <Route
+          path="/about-us" 
+          element={<AboutUs />} />
       </Routes>
       <Footer />
     </Router>

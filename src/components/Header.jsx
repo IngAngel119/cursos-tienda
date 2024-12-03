@@ -4,6 +4,7 @@ import "../index.css";
 import "./Header.css";
 import homeicon from "../img/home-icon.png";
 import carticon from "../img/cart-icon.png";
+import abouticon from "../img/about-logo.png";
 
 const Header = ({ setSearchQuery }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,6 +19,9 @@ const Header = ({ setSearchQuery }) => {
       <div className="nav-buttons">
         <Link to="/" className="nav-button home-button">
           <img src={homeicon} alt="Home" className="icon" />
+        </Link>
+        <Link to="/about-us" className="nav-button">
+            <img src={abouticon} alt="Sobre Nosotros" className="icon" />
         </Link>
         <Link to="/cart" className="nav-button cart-button">
           <img src={carticon} alt="Carrito" className="icon" />

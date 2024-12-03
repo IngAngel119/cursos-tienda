@@ -23,16 +23,17 @@
   }
   
   .load-more-button {
+    margin-top: 10px;
     padding: 10px 20px;
-    background-color: #4b5bd7;
-    color: white;
     border: none;
+    background: linear-gradient(45deg,#FF00D8,#FF542E);
+    color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease-in-out;
   }
   
   .load-more-button:hover {
-    background-color: #6776e7;
+    transform:scale(1.2);
   }
   

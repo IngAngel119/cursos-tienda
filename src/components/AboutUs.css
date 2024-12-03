@@ -1,0 +1,52 @@
+@keyframes bounceOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px); 
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(20px); 
+    }
+    80% {
+      transform: translateY(-10px); 
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.about-us-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .about-us-hero {
+    flex: 1;
+    padding: 50px 100px;
+    text-align:left;
+    background-color: #ffffff;
+    animation: bounceOut 0.8s ease-in-out; 
+  }
+  
+  .about-us-hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-hero p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  .about-us-image { 
+    max-width: 70%; 
+    height: auto; 
+    border-radius: 10px; 
+    align-items: center;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+  

@@ -1,10 +1,10 @@
 import React from "react";
 import "../index.css";
 import "./Footer.css"
-import facebookImage from '../img/Logo-Facebook(BN).png';
-import twitterImage from '../img/Twitter-Logo.webp';
-import instagramImage from '../img/Logo-Instagram(BN).png';
-import linkedinImage from '../img/Logo - Linkedin.png';
+import facebookImage from '../img/face-logo.png';
+import twitterImage from '../img/twitter-logo.png';
+import instagramImage from '../img/insta-logo.png';
+import linkedinImage from '../img/link-logo.png';
 
 
 const Footer = () => {

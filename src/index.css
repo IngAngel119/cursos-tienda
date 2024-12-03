@@ -4,7 +4,14 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Roboto', Arial, sans-serif;
+  
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p, input{
+  background: linear-gradient(45deg,#1E98FD,#FF00F7);
+    -webkit-background-clip: text;
+    color: transparent;  
 }
 
 :root {
