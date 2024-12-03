@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
+import "./Header.css";
 import homeicon from "../img/home-icon.png";
 import carticon from "../img/cart-icon.png";
 

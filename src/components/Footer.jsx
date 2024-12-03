@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import "./Footer.css"
 import facebookImage from '../img/Logo-Facebook(BN).png';
 import twitterImage from '../img/Twitter-Logo.webp';
 import instagramImage from '../img/Logo-Instagram(BN).png';

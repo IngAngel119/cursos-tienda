@@ -1,6 +1,7 @@
 import React from "react";
 import ProductContainer from "../containers/ProductContainer";
 import "../index.css";
+import "./SearchResults.css"
 
 const SearchResults = ({ results, handleAddToCart }) => {
   return (

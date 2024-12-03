@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .cite {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .cite:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  
+  .cite h2 {
+    margin-top: 10px;
+  }
