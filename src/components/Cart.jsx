@@ -35,3 +35,4 @@ const Cart = ({ cartItems, handleRemoveFromCart }) => {
 };
 
 export default Cart;
+

@@ -2,19 +2,23 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Slider from "./components/Slider";
 import Cite from "./components/Cite";
 import Footer from "./components/Footer";
 import Popular from "./components/Popular"; 
 import Products from "./components/Products"; 
 import SearchResults from "./components/SearchResults"; 
 import Cart from "./components/Cart"; 
+import Notification from "./components/Notification";
 import "./index.css";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState(""); 
   const [searchResults, setSearchResults] = useState([]); 
-  const [cartItems, setCartItems] = useState([]); 
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem("cartItems");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+  const [notification, setNotification] = useState(""); 
 
   const courses = [
     {
@@ -41,7 +45,7 @@ function App() {
       image: require("./img/swiftui.jpeg.avif"),
       price: 220
     }
-    // Mas Cursos proximamente
+    // Mas Cursos Proximamente
   ];
 
   const popular_courses = [
@@ -58,17 +62,36 @@ function App() {
     setSearchResults(filteredCourses);
   }, [searchQuery, courses]); 
 
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   const handleAddToCart = (course) => {
-    setCartItems([...cartItems, course]);
+    if (!cartItems.some(item => item.name === course.name)) {
+      setCartItems([...cartItems, course]);
+      showNotification(`Añadido: ${course.name}`);
+    }
+    else{
+      showNotification(`Curso ya añadido: ${course.name}`);
+    }
   };
 
   const handleRemoveFromCart = (course) => {
     setCartItems(cartItems.filter(item => item.name !== course.name));
+    showNotification(`Eliminado: ${course.name}`);
+  };
+
+  const showNotification = (message) => {
+    setNotification(message);
+    setTimeout(() => {
+      setNotification("");
+    }, 3000); 
   };
 
   return (
     <Router>
       <Header setSearchQuery={setSearchQuery} />
+      {notification && <Notification message={notification} />}
       <div className="search-results-wrapper">
         {searchQuery && (
           <SearchResults results={searchResults} handleAddToCart={handleAddToCart} />

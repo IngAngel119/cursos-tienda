@@ -7,7 +7,7 @@ const ProductContainer = ({ name, description, image, price, isSearchResult, han
       <img src={image} alt={name} className="product-image" />
       <h2>{name}</h2>
       {!isSearchResult && <p>{description}</p>}
-      <h3 className="product-price">${price}</h3>
+      <p className="product-price">${price}</p>
       <button 
         className="add-button" 
         onClick={() => handleAddToCart({ name, description, image, price })}
