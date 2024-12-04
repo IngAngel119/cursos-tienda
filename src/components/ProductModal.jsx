@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProductModal.css';
 
 const ProductModal = ({ name, descripcionCompleta, image, price, handleAddToCart, handleRemoveFromCart, handleCloseModal, isInCart }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      document.querySelector('.modal-content').classList.add('animate');
+      setIsVisible(true); 
     }, 10);
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -21,15 +24,13 @@ const ProductModal = ({ name, descripcionCompleta, image, price, handleAddToCart
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content">
+      <div className={`modal-content ${isVisible ? 'animate' : ''}`}>
         <span className="close-button" onClick={handleCloseModal}>&times;</span>
-        <div className="modal-info">
+        <div className={`modal-info ${isVisible ? 'animate' : ''}`}>
           <h2>{name}</h2>
-          {descripcionCompleta.split('\n').map((line, index) => (
-            <p key={index}>{line}</p>
-          ))}
+          <p>{descripcionCompleta}</p>
         </div>
-        <div className="modal-image-container">
+        <div className={`modal-image-container ${isVisible ? 'animate' : ''}`}>
           <img src={image} alt={name} />
           <p className="price">Precio: ${price}</p>
           <button 
@@ -45,4 +46,3 @@ const ProductModal = ({ name, descripcionCompleta, image, price, handleAddToCart
 };
 
 export default ProductModal;
-
