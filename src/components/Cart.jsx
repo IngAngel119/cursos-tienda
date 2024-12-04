@@ -1,7 +1,8 @@
 import React from "react";
 import ProductContainer from "../containers/ProductContainer";
+import "./Cart.css"
 
-const Cart = ({ cartItems, handleRemoveFromCart }) => {
+const Cart = ({ cartItems, handleRemoveFromCart, handleCheckout }) => {
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
@@ -26,6 +27,9 @@ const Cart = ({ cartItems, handleRemoveFromCart }) => {
           <div className="cart-total">
             <h2>Total de Compra: ${total.toFixed(2)}</h2>
           </div>
+          <button className="checkout-button" onClick={handleCheckout}>
+            Finalizar Compra
+          </button>
         </>
       ) : (
         <p>No hay productos en el carrito.</p>
@@ -35,4 +39,5 @@ const Cart = ({ cartItems, handleRemoveFromCart }) => {
 };
 
 export default Cart;
+
 

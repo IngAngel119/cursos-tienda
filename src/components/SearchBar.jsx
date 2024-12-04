@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBar = ({ setSearchQuery }) => {
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value); // Actualiza el estado con lo que el usuario escribe
+    setSearchQuery(e.target.value); 
   };
 
   return (

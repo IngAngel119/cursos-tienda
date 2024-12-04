@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import ProductContainer from "../containers/ProductContainer";
 import "./Products.css";
 
-const Products = ({ courses, handleAddToCart, loadMoreCourses, hasMore }) => {
+const Products = ({ courses, handleAddToCart, loadMoreCourses, hasMore, handleShowModal }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -19,13 +19,15 @@ const Products = ({ courses, handleAddToCart, loadMoreCourses, hasMore }) => {
             key={index}
             name={course.name}
             description={course.description}
+            descripcionCompleta={course.descripcionCompleta} 
             image={course.image}
             price={course.price}
             handleAddToCart={handleAddToCart}
+            handleShowModal={() => handleShowModal(course)} 
           />
         ))}
       </div>
-      {hasMore && ( // Mostrar el botón solo si hay más cursos
+      {hasMore && (
         <div className="load-more">
           <button onClick={loadMoreCourses} className="load-more-button">
             Cargar Más
@@ -37,4 +39,3 @@ const Products = ({ courses, handleAddToCart, loadMoreCourses, hasMore }) => {
 };
 
 export default Products;
-

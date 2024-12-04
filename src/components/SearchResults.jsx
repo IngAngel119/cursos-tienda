@@ -3,7 +3,7 @@ import ProductContainer from "../containers/ProductContainer";
 import "../index.css";
 import "./SearchResults.css"
 
-const SearchResults = ({ results, handleAddToCart }) => {
+const SearchResults = ({ results, handleAddToCart, handleShowModal }) => {
   return (
     <div className="search-results-container">
       {results.length > 0 ? (
@@ -16,6 +16,7 @@ const SearchResults = ({ results, handleAddToCart }) => {
             price={course.price}
             isSearchResult={true}
             handleAddToCart={handleAddToCart}
+            handleShowModal={() => handleShowModal(course)} 
           />
         ))
       ) : (
@@ -26,6 +27,7 @@ const SearchResults = ({ results, handleAddToCart }) => {
 };
 
 export default SearchResults;
+
 
 
 
