@@ -28,7 +28,9 @@ const ProductModal = ({ name, descripcionCompleta, image, price, handleAddToCart
         <span className="close-button" onClick={handleCloseModal}>&times;</span>
         <div className={`modal-info ${isVisible ? 'animate' : ''}`}>
           <h2>{name}</h2>
-          <p>{descripcionCompleta}</p>
+          {descripcionCompleta.split('\n').map((line, index) => (
+            <p key={index}>{line}</p>
+          ))}
         </div>
         <div className={`modal-image-container ${isVisible ? 'animate' : ''}`}>
           <img src={image} alt={name} />
